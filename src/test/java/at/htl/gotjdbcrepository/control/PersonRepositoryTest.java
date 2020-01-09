@@ -61,7 +61,6 @@ class PersonRepositoryTest {
         System.out.println(personRepository2);
         assertThat(personRepository1 == personRepository2).isTrue();
         assertThat(personRepository1).isNotNull();
-
     }
 
     @Test
