@@ -50,7 +50,15 @@ public class Person {
         this.house = house;
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return Objects.equals(getName(), person.getName()) &&
+               Objects.equals(getCity(), person.getCity()) &&
+               Objects.equals(getHouse(), person.getHouse());
+    }
 
     @Override
     public String toString() {
